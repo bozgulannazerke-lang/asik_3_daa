@@ -1,0 +1,18 @@
+15 cases generated (seed 20261025), one process, one batch
+PASS dsu random 250000 operations
+PASS dsu deep chain
+PASS kruskal random graph
+PASS prim random graph
+PASS kruskal path graph
+PASS prim path graph
+PASS scc deep chain
+PASS scc one big cycle
+PASS scc random digraph
+PASS topo deep chain
+PASS topo chain with back edge
+PASS topo random DAG
+PASS dag deep chain, total below -1e14
+PASS dag random DAG
+PASS dag cycle outside source reach
+total wall time of the batch (build + launch + all cases): 5.1 s
+ALL PASSED

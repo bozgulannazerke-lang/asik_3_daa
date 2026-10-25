@@ -1,0 +1,19 @@
+example: route 0 -> 3 = [0, 1, 2, 3]
+   edge IDs [0, 2, 3], total weight 0, distance 0
+PASS example: direction, endpoints, total weight
+PASS example: route to 3 is [0,1,2,3]
+example/source: route 0 -> 0 = [0]
+   edge IDs [], total weight 0, distance 0
+PASS example/source: direction, endpoints, total weight
+PASS source: route is [0]
+example/unreachable: route 0 -> 4 = []
+PASS example/unreachable: unreachable target gives the documented empty route
+tied/parallel to 1: route 0 -> 1 = [0, 1]
+   edge IDs [0], total weight 2, distance 2
+PASS tied/parallel to 1: direction, endpoints, total weight
+tied/parallel to 2: route 0 -> 2 = [0, 2]
+   edge IDs [3], total weight 3, distance 3
+PASS tied/parallel to 2: direction, endpoints, total weight
+single vertex: route 0 -> 0 = [0]
+   edge IDs [], total weight 0, distance 0
+PASS single vertex: direction, endpoints, total weight
