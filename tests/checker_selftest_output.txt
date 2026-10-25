@@ -1,0 +1,49 @@
+PASS accepts: dsu: published example
+PASS rejects: dsu: component count changes on a repeated union -> states differ from the reference
+PASS rejects: dsu: initial state included -> states differ from the reference
+PASS rejects: dsu: wrong largest size -> states differ from the reference
+PASS accepts: forest: one optimal choice
+PASS accepts: forest: another optimal choice, other order
+PASS rejects: forest: edges 0 and 1 form a cycle -> selected edge closes a cycle or is a self-loop
+PASS rejects: forest: spanning but not optimal (cost 14) -> cost 14 is not optimal (12)
+PASS rejects: forest: claimed cost is not the sum of the edges -> cost differs from the sum of selected edges
+PASS rejects: forest: repeated edge ID -> repeated edge ID
+PASS rejects: forest: wrong component count -> wrong component count
+PASS rejects: forest: not spanning (one edge only) -> cost 5 is not optimal (12)
+PASS accepts: forest: self-loop skipped
+PASS rejects: forest: self-loop selected -> selected edge closes a cycle or is a self-loop
+PASS accepts: scc: other labels
+PASS accepts: scc: other order of condensation pairs
+PASS rejects: scc: two SCCs got one label -> a label mixes several SCCs
+PASS rejects: scc: one SCC got two labels -> an SCC has several labels
+PASS rejects: scc: duplicate condensation pair -> duplicate condensation pair
+PASS rejects: scc: missing condensation pair -> condensation differs from the reference
+PASS rejects: scc: internal edge in condensation -> condensation differs from the reference
+PASS rejects: scc: reversed condensation pair -> condensation differs from the reference
+PASS accepts: topo: published order
+PASS accepts: topo: another valid order
+PASS rejects: topo: an edge goes backwards -> an edge goes backwards
+PASS rejects: topo: a vertex is missing -> order is not a permutation
+PASS rejects: topo: a vertex is repeated -> order is not a permutation
+PASS rejects: topo: acyclic graph reported as cyclic -> should be acyclic
+PASS accepts: topo: cycle reported correctly
+PASS rejects: topo: cycle reported but order not empty -> should report a cycle
+PASS rejects: topo: cycle not reported -> should report a cycle
+PASS accepts: dag: published example
+PASS rejects: dag: longer route chosen (distance 8) -> distances differ from the reference
+PASS rejects: dag: -1 used instead of null -> distances differ from the reference
+PASS rejects: dag: unreachable vertex given a distance -> distances differ from the reference
+PASS rejects: dag: parent edge is not on a shortest route -> bad parent edge
+PASS rejects: dag: parent edge ends at another vertex -> bad parent edge
+PASS rejects: dag: source has a parent edge -> unexpected parent edge
+PASS rejects: dag: acyclic graph reported as cyclic -> should be acyclic
+PASS accepts: dag: tied parents [-1,0,2]
+PASS accepts: dag: tied parents [-1,0,3]
+PASS accepts: dag: tied parents [-1,1,2]
+PASS accepts: dag: tied parents [-1,1,3]
+PASS rejects: dag: parent edge of vertex 1 ends at vertex 2 -> bad parent edge
+PASS accepts: dag: cycle reported correctly
+PASS rejects: dag: cycle reported but arrays not empty -> should report a cycle with empty arrays
+PASS rejects: dag: cycle not reported -> should report a cycle with empty arrays
+47 checks, 0 failed
+ALL PASSED
