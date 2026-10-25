@@ -10,3 +10,6 @@ __pycache__/
 *.key
 .DS_Store
 Thumbs.db
+
+.build/
+__pycache__/
