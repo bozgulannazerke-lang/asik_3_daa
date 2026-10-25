@@ -1,0 +1,18 @@
+Java 25.0.4.1 (OpenJDK 64-Bit Server VM)
+OS Linux amd64, logical CPUs 2, max heap 1986 MB
+Timer System.nanoTime(), warm-up 5 untimed runs per method, 7 timed runs per method, seed 20261025, times in ms
+n=10000 m=25000 components=67 cost=-5334526775020 (Kruskal == Prim, valid forests)
+  kruskal [4.5, 4.5, 4.2, 4.2, 4.2, 7.1, 4.3] median 4.3
+  prim    [7.3, 6.4, 6.3, 6.1, 9.5, 7.8, 6.6] median 6.6
+n=50000 m=125000 components=329 cost=-26463030823142 (Kruskal == Prim, valid forests)
+  kruskal [25.3, 12.7, 12.1, 12.9, 17.3, 11.8, 12.7] median 12.7
+  prim    [30.7, 33.9, 36.7, 30.2, 25.1, 25.2, 24.1] median 30.2
+n=100000 m=250000 components=687 cost=-52737000949726 (Kruskal == Prim, valid forests)
+  kruskal [25.1, 28.4, 25.0, 27.0, 24.7, 43.9, 28.1] median 27.0
+  prim    [67.1, 59.4, 69.7, 57.1, 57.9, 94.8, 58.1] median 59.4
+
+| n | m | Kruskal runs (ms) | Kruskal median | Prim runs (ms) | Prim median |
+|---|---|---|---|---|---|
+| 10000 | 25000 | [4.5, 4.5, 4.2, 4.2, 4.2, 7.1, 4.3] | 4.3 | [7.3, 6.4, 6.3, 6.1, 9.5, 7.8, 6.6] | 6.6 |
+| 50000 | 125000 | [25.3, 12.7, 12.1, 12.9, 17.3, 11.8, 12.7] | 12.7 | [30.7, 33.9, 36.7, 30.2, 25.1, 25.2, 24.1] | 30.2 |
+| 100000 | 250000 | [25.1, 28.4, 25.0, 27.0, 24.7, 43.9, 28.1] | 27.0 | [67.1, 59.4, 69.7, 57.1, 57.9, 94.8, 58.1] | 59.4 |

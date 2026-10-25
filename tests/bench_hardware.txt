@@ -1,0 +1,4 @@
+CPU(s):                                  2
+Model name:                              AMD EPYC 7763 64-Core Processor
+               total        used        free      shared  buff/cache   available
+Mem:           7.8Gi       1.9Gi       783Mi        66Mi       5.4Gi       5.8Gi
